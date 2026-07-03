@@ -783,6 +783,48 @@ ul { list-style: none; }
   opacity: 1;
 }
 
+/* ─── Floating WhatsApp Button ─── */
+.whatsapp-fixed {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.whatsapp-fixed span {
+  background: var(--dark-4);
+  border: 1px solid rgba(37,211,102,.35);
+  color: var(--white);
+  padding: 10px 14px;
+  border-radius: 50px;
+  font-size: .86rem;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  white-space: nowrap;
+}
+.whatsapp-float {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 10px 28px rgba(37,211,102,.35);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 14px 34px rgba(37,211,102,.45);
+}
+.whatsapp-float img {
+  width: 64%;
+  height: 64%;
+  object-fit: contain;
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 900px) {
   .contacto-wrapper {
@@ -805,4 +847,20 @@ ul { list-style: none; }
   .valores-grid { grid-template-columns: 1fr; }
   .hero-cta { flex-direction: column; align-items: center; }
   .btn-primary, .btn-ghost { width: 100%; text-align: center; }
+  .whatsapp-fixed {
+    right: 16px;
+    bottom: 16px;
+    gap: 8px;
+  }
+  .whatsapp-fixed span {
+    max-width: 160px;
+    padding: 8px 12px;
+    font-size: .76rem;
+    white-space: normal;
+    line-height: 1.25;
+  }
+  .whatsapp-float {
+    width: 58px;
+    height: 58px;
+  }
 }
