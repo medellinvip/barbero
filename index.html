@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es" id="htmlRoot">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" id="metaDesc" content="Barbería a domicilio en Medellín. Atendemos en El Poblado, Belén, Laureles y Envigado. Cortes premium, arreglo de barba con toalla caliente y exfoliación. Reserva ahora." />
+  <title>BarberHome Medellín — Barbería a Domicilio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">✦</span>
+        BarberHome
+      </a>
+      <ul class="nav-links">
+        <li><a href="#servicios" data-i18n="nav_services">Servicios</a></li>
+        <li><a href="#zonas" data-i18n="nav_zones">Zonas</a></li>
+        <li><a href="#contacto" data-i18n="nav_book">Reservar</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btnEs" onclick="setLang('es')">ES</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" id="btnEn" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#servicios" class="mob-link" data-i18n="nav_services">Servicios</a>
+      <a href="#zonas" class="mob-link" data-i18n="nav_zones">Zonas</a>
+      <a href="#contacto" class="mob-link" data-i18n="nav_book">Reservar</a>
+      <div class="mob-lang">
+        <button class="lang-btn" id="btnEsMob" onclick="setLang('es')">ES</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" id="btnEnMob" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero_eyebrow">✦ Barbería a Domicilio en Medellín ✦</p>
+      <h1 class="hero-title" data-i18n-html="hero_title">Tu barbero.<br/>Tu casa.<br/>Tu estilo.</h1>
+      <p class="hero-sub" data-i18n-html="hero_sub">
+        Llevamos la experiencia de barbería premium directamente a tu hogar.<br/>
+        Sin esperas. Sin desplazamientos. Solo excelencia.
+      </p>
+      <div class="hero-cta">
+        <a href="#contacto" class="btn-primary" data-i18n="hero_cta_primary">Reservar Cita</a>
+        <a href="#servicios" class="btn-ghost" data-i18n="hero_cta_secondary">Ver Servicios</a>
+      </div>
+      <div class="hero-zonas">
+        <span class="zona-pill">📍 El Poblado</span>
+        <span class="zona-pill">📍 Belén</span>
+        <span class="zona-pill">📍 Laureles</span>
+        <span class="zona-pill">📍 Envigado</span>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span data-i18n="hero_scroll">Descubre más</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-i18n="svc_eyebrow">— Lo que ofrecemos —</p>
+      <h2 class="section-title" data-i18n="svc_title">Nuestros Servicios</h2>
+      <p class="section-sub" data-i18n="svc_sub">Cada servicio incluye la atención personalizada de un barbero profesional en la comodidad de tu espacio.</p>
+
+      <div class="services-grid">
+
+        <!-- Corte -->
+        <div class="service-card" data-delay="0">
+          <div class="card-icon">✂</div>
+          <div class="card-badge" data-i18n="badge_popular">Más popular</div>
+          <h3 class="card-title" data-i18n="c1_title">Corte Clásico</h3>
+          <p class="card-price">$100.000</p>
+          <ul class="card-features">
+            <li data-i18n="c1_f1">Corte personalizado a tu gusto</li>
+            <li data-i18n="c1_f2">Diseño y acabado profesional</li>
+            <li data-i18n="c1_f3">Lavado incluido</li>
+          </ul>
+          <a href="#contacto" class="card-cta" data-i18n="cta_book">Reservar</a>
+        </div>
+
+        <!-- Corte + Barba -->
+        <div class="service-card featured" data-delay="100">
+          <div class="card-icon">⚔</div>
+          <div class="card-badge highlight" data-i18n="badge_recommended">Recomendado</div>
+          <h3 class="card-title" data-i18n="c2_title">Corte + Barba</h3>
+          <p class="card-price">$150.000</p>
+          <ul class="card-features">
+            <li data-i18n="c2_f1">Corte completo a tu estilo</li>
+            <li data-i18n="c2_f2">Arreglo de barba profesional</li>
+            <li data-i18n="c2_f3">🔥 Toalla caliente</li>
+            <li data-i18n="c2_f4">🌿 Exfoliación facial</li>
+          </ul>
+          <a href="#contacto" class="card-cta" data-i18n="cta_book">Reservar</a>
+        </div>
+
+        <!-- La Experiencia VIP -->
+        <div class="service-card vip" data-delay="200">
+          <div class="card-icon">♛</div>
+          <div class="card-badge gold" data-i18n="badge_vip">VIP Exclusivo</div>
+          <h3 class="card-title" data-i18n="c3_title">La Experiencia</h3>
+          <p class="card-price">$250.000</p>
+          <ul class="card-features">
+            <li data-i18n="c3_f1">Servicio completo premium</li>
+            <li data-i18n="c3_f2">Tratamiento facial de lujo</li>
+            <li data-i18n="c3_f3">🔥 Toalla caliente</li>
+            <li data-i18n="c3_f4">🌿 Exfoliación profunda</li>
+            <li data-i18n="c3_f5">💧 Aceites esenciales</li>
+            <li data-i18n="c3_f6">👂 Limpieza de oídos y nariz</li>
+          </ul>
+          <a href="#contacto" class="card-cta" data-i18n="cta_book">Reservar</a>
+        </div>
+
+        <!-- Solo Barba -->
+        <div class="service-card" data-delay="300">
+          <div class="card-icon">🪒</div>
+          <div class="card-badge" data-i18n="badge_specialty">Especialidad</div>
+          <h3 class="card-title" data-i18n="c4_title">Solo Barba</h3>
+          <p class="card-price">$100.000</p>
+          <ul class="card-features">
+            <li data-i18n="c4_f1">Diseño y perfilado de barba</li>
+            <li data-i18n="c4_f2">🔥 Toalla caliente</li>
+            <li data-i18n="c4_f3">🌿 Exfoliación facial</li>
+            <li data-i18n="c4_f4">💧 Aceites esenciales</li>
+          </ul>
+          <a href="#contacto" class="card-cta" data-i18n="cta_book">Reservar</a>
+        </div>
+
+        <!-- Limpieza Oídos y Nariz -->
+        <div class="service-card addon" data-delay="400">
+          <div class="card-icon">✦</div>
+          <div class="card-badge">Add-on</div>
+          <h3 class="card-title" data-i18n="c5_title">Limpieza de Oídos y Nariz</h3>
+          <p class="card-price">$40.000</p>
+          <ul class="card-features">
+            <li data-i18n="c5_f1">Limpieza profesional y segura</li>
+            <li data-i18n="c5_f2">Complemento ideal para cualquier servicio</li>
+          </ul>
+          <a href="#contacto" class="card-cta" data-i18n="cta_add">Agregar</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONAS -->
+  <section id="zonas">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-i18n="zones_eyebrow">— Cobertura —</p>
+      <h2 class="section-title" data-i18n="zones_title">¿Dónde llegamos?</h2>
+      <p class="section-sub" data-i18n="zones_sub">Cubrimos los mejores sectores de Medellín y el Área Metropolitana.</p>
+
+      <div class="zonas-grid">
+        <div class="zona-card" data-delay="0">
+          <div class="zona-num">01</div>
+          <h3>El Poblado</h3>
+          <p data-i18n="z1_desc">Zona Rosa, Parque Lleras, Patio Bonito y alrededores.</p>
+        </div>
+        <div class="zona-card" data-delay="100">
+          <div class="zona-num">02</div>
+          <h3>Belén</h3>
+          <p data-i18n="z2_desc">Belén La Gloria, Manzanillo, Las Mercedes y alrededores.</p>
+        </div>
+        <div class="zona-card" data-delay="200">
+          <div class="zona-num">03</div>
+          <h3>Laureles</h3>
+          <p data-i18n="z3_desc">Estadio, Los Conquistadores, La 70 y alrededores.</p>
+        </div>
+        <div class="zona-card" data-delay="300">
+          <div class="zona-num">04</div>
+          <h3>Envigado</h3>
+          <p data-i18n="z4_desc">El Esmeraldal, Loma del Escobero, Centro de Envigado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ ELEGIRNOS -->
+  <section id="valores">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-i18n="why_eyebrow">— ¿Por qué nosotros? —</p>
+      <h2 class="section-title" data-i18n="why_title">La diferencia BarberHome</h2>
+      <div class="valores-grid">
+        <div class="valor-item" data-delay="0">
+          <div class="valor-icon">🕐</div>
+          <h4 data-i18n="v1_title">Sin Esperas</h4>
+          <p data-i18n="v1_desc">Llegamos a la hora acordada. Tu tiempo es valioso.</p>
+        </div>
+        <div class="valor-item" data-delay="100">
+          <div class="valor-icon">🏠</div>
+          <h4 data-i18n="v2_title">En tu Espacio</h4>
+          <p data-i18n="v2_desc">Comodidad total. Tu casa, tu apartamento, tu oficina.</p>
+        </div>
+        <div class="valor-item" data-delay="200">
+          <div class="valor-icon">💼</div>
+          <h4 data-i18n="v3_title">Equipo Profesional</h4>
+          <p data-i18n="v3_desc">Herramientas certificadas y productos de alta calidad.</p>
+        </div>
+        <div class="valor-item" data-delay="300">
+          <div class="valor-icon">✨</div>
+          <h4 data-i18n="v4_title">Experiencia Premium</h4>
+          <p data-i18n="v4_desc">Servicio que supera cualquier barbería tradicional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-i18n="contact_eyebrow">— Contáctanos —</p>
+      <h2 class="section-title" data-i18n="contact_title">Reserva tu Cita</h2>
+      <p class="section-sub" data-i18n="contact_sub">Escríbenos y confirmamos disponibilidad en minutos.</p>
+
+      <div class="contacto-wrapper">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="nombre" data-i18n="form_name">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" data-i18n-ph="form_name_ph" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono" data-i18n="form_phone">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" required />
+          </div>
+          <div class="form-group">
+            <label for="zona" data-i18n="form_zone">Barrio / Zona</label>
+            <select id="zona" name="zona" required>
+              <option value="" disabled selected data-i18n="form_zone_ph">Selecciona tu zona</option>
+              <option>El Poblado</option>
+              <option>Belén</option>
+              <option>Laureles</option>
+              <option>Envigado</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="servicio" data-i18n="form_service">Servicio deseado</label>
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected data-i18n="form_service_ph">Selecciona un servicio</option>
+              <option data-i18n="opt1">Corte Clásico — $100.000</option>
+              <option data-i18n="opt2">Corte + Barba — $150.000</option>
+              <option data-i18n="opt3">La Experiencia VIP — $250.000</option>
+              <option data-i18n="opt4">Solo Barba — $100.000</option>
+              <option data-i18n="opt5">Limpieza de Oídos y Nariz — $40.000</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje" data-i18n="form_msg">Mensaje adicional (opcional)</label>
+            <textarea id="mensaje" name="mensaje" data-i18n-ph="form_msg_ph" placeholder="Horario preferido, dirección, indicaciones especiales..." rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-w" id="submitBtn" data-i18n="form_submit">
+            Enviar por WhatsApp
+          </button>
+          <p class="form-note" data-i18n-html="form_note">También puedes escribirnos directamente al <strong>WhatsApp</strong> y atendemos de inmediato.</p>
+        </form>
+
+        <div class="contacto-info">
+          <a href="https://wa.me/573043262248" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp-btn">
+            <span class="ci-icon">💬</span>
+            <div>
+              <strong>WhatsApp</strong>
+              <p data-i18n="ci_wa">Respuesta inmediata</p>
+            </div>
+          </a>
+          <div class="contact-item">
+            <span class="ci-icon">📍</span>
+            <div>
+              <strong data-i18n="ci_zones_title">Zonas de cobertura</strong>
+              <p>Poblado · Belén · Laureles · Envigado</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">🕐</span>
+            <div>
+              <strong data-i18n="ci_hours_title">Horario de atención</strong>
+              <p data-i18n-html="ci_hours">Lunes a Sábado: 8am – 8pm<br/>Domingo: 9am – 5pm</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">⚡</span>
+            <div>
+              <strong data-i18n="ci_confirm_title">Confirmación</strong>
+              <p data-i18n="ci_confirm">En menos de 30 minutos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">✦</span> BarberHome Medellín
+      </div>
+      <p class="footer-tagline" data-i18n="footer_tagline">Barbería a domicilio premium en Medellín</p>
+      <div class="footer-links">
+        <a href="#servicios" data-i18n="nav_services">Servicios</a>
+        <a href="#zonas" data-i18n="nav_zones">Zonas</a>
+        <a href="#contacto" data-i18n="nav_book">Reservar</a>
+      </div>
+      <p class="footer-copy" data-i18n="footer_copy">© 2026 BarberHome Medellín. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
